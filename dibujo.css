@@ -111,3 +111,68 @@ body, html {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+.boton1, .boton2, .boton3, .punto {
+  display: flex;
+}
+
+.boton1, .boton2, .boton3 {
+  width: 15px;
+  height: 5px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.punto {
+  width: 5px;
+  height: 5px;
+  background-color: #51ff00;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: none; /* Esto desactiva la animación a menos que se especifique lo contrario */
+}
+
+/* Aplica el efecto hover para aumentar el tamaño */
+.boton1:hover {
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.boton2:hover, .boton3:hover {
+  width: 17px;
+  height: 7px;
+  cursor: pointer;
+}
+
+/*Selector +*/
+.boton1 + .boton2 {
+  margin-left: 20px; /* Aumenta el margen izquierdo entre botón 1 y botón 2 */
+}
+
+
+/*Selector >*/
+.tv_inferior > .boton1, .tv_inferior > .boton2, .tv_inferior > .boton3 {
+  border-radius: 2px; /* Aplica un borde redondeado a los botones */
+}
+
+.tv_inferior > .boton1:first-child { /* Selecciona el primer botón y cambia su color */
+  background-color: #ff0000;
+}
+
+.tv_inferior > .boton2:nth-child(2) { /* Selecciona el segundo botón (botón 2) y cambia su color */
+  background-color: yellow;
+}
+
+
+/*Selector ~*/
+.boton1 ~ .boton2, .boton1 ~ .boton3 {
+  background-color:blue;
+}
+.boton1:hover ~ .punto {
+  background-color: #ff0000; /* Cambia el color a rojo APAGAR TV*/
+}
+
+.boton2:hover ~ .punto, .boton3:hover ~ .punto { /* Aplica el efecto de parpadeo a .punto cuando se hace hover sobre .boton2 o .boton3 CAMBIO DE CANAL*/
+  animation: blink 1s linear infinite;
+}
