@@ -65,3 +65,49 @@ body, html {
   left: 0;
   background-color: rgba(69, 68, 69, 1)
 }
+
+.cuadro_logo {
+  opacity: 0.9;
+  width: 55px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: moveLogo 10s infinite alternate, changeColor 10s infinite alternate;
+}
+
+.logo_tv {
+  width: 50px;
+}
+
+/* Animaciones y transiciones */
+@keyframes moveLogo {
+  0% {
+    transform: translate(-133px, -90px);
+  }
+  25% {
+    transform: translate(133px, 0px);
+  }
+  50% {
+    transform: translate(0px, 90px);
+  }
+  75% {
+    transform: translate(-133px, 0px);
+  }
+  100% {
+    transform: translate(0px, -90px);
+  }
+}
+
+@keyframes changeColor {
+  0%, 100% { background-color: white; }
+  25% { background-color: green; }
+  50% { background-color: red; }
+  75% { background-color: yellow; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
