@@ -24,7 +24,7 @@ Se desarrollo una televisión con un diseño moderno y modular utilizando CSS de
   [Repositorio en GitHub](https://github.com/JosueSay/Cambiando-de-Canal-Desarrollando-una-TV-con-HTML-y-CSS)
 
 - **Servidor de la Clase:**
-  [Proyecto en el Servidor](enlace)
+  [Proyecto en el Servidor](https://tiburoncin.lat/22801/lab4/index.html)
 
 ## 🐳 Imagen de Docker
 
